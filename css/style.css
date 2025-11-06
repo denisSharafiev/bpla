@@ -30,8 +30,8 @@ body {
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-nav .nav-link {
@@ -118,6 +118,10 @@ body {
 .about-image img {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    max-height: 400px; /* Ограничиваем максимальную высоту */
+    width: auto; /* Ширина подстраивается автоматически */
+    object-fit: cover; /* Сохраняет пропорции и обрезает если нужно */
+    margin-left: 150px;
 }
 
 .about-image img:hover {
@@ -291,6 +295,12 @@ body {
 section {
     opacity: 1 !important;
     transform: none !important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    margin-right: 12px;
 }
 
 /* Smooth scroll */
