@@ -122,9 +122,9 @@ const InfoSection = () => {
 
   // Заглушки для изображений - замените на реальные URL
   const images = [
-    { id: 1, src: '/images/photo1.png', alt: 'Бойцы бригады' },
-    { id: 2, src: '/images/photo2.png', alt: 'Работа бригады' },
-    { id: 3, src: '/images/photo3.png', alt: 'Мероприятия' },
+    { id: 1, src: './images/photo1.png', alt: 'Бойцы бригады' },
+    { id: 2, src: './images/photo2.png', alt: 'Работа бригады' },
+    { id: 3, src: './images/photo3.png', alt: 'Мероприятия' },
   ];
 
   return (

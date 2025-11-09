@@ -194,7 +194,7 @@ const AboutPage = () => {
             {[1, 2, 3].map((id) => (
               <ImageCard key={id}>
                 <Image 
-                  src={`/images/about-${id}.png`} 
+                  src={`./images/about-${id}.png`} 
                   alt={`Бригада Самарканд ${id}`}
                   onError={(e) => {
                     e.target.style.display = 'none';

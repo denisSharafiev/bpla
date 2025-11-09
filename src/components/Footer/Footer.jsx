@@ -16,7 +16,7 @@ const BackgroundImage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/footer-background.jpg');
+  background-image: url('./images/footer-background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ const Footer = () => {
       <Container>
         <LogoContainer>
           <LogoImage 
-            src="/photo.png" 
+            src="./photo.png" 
             alt="123 ОМсБр бригада Самарканда"
             onError={(e) => {
               e.target.style.display = 'none';

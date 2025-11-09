@@ -17,7 +17,7 @@ const BackgroundImage = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/back_section.jpg');
+  background-image: url('./images/back_section.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

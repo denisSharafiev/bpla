@@ -141,57 +141,57 @@ const ButtonContainer = styled.div`
 const RecruitmentSection = () => {
   const positions = [
     {
-      image: "/icons/1.png.webp", // Врачи
+      image: "./icons/1.png.webp", // Врачи
       title: "Врачи",
       description: "с опытом либо задатками руководства"
     },
     {
-      image: "/icons/2.png.webp", // Врачи специалисты
+      image: "./icons/2.png.webp", // Врачи специалисты
       title: "Врачи специалисты",
       description: "анестезиолог-реаниматолог, травматолог"
     },
     {
-      image: "/icons/3.png.webp", // Фельдшера
+      image: "./icons/3.png.webp", // Фельдшера
       title: "Фельдшера",
       description: ""
     },
     {
-      image: "/icons/11.png.webp", // Санинструкторы
+      image: "./icons/11.png.webp", // Санинструкторы
       title: "Санинструкторы",
       description: ""
     },
     {
-      image: "/icons/4.png.webp", // Медсестры/Медбратья
+      image: "./icons/4.png.webp", // Медсестры/Медбратья
       title: "Медсестры/Медбратья",
       description: "в том числе операционные"
     },
     {
-      image: "/icons/5.png.webp", // Санитары
+      image: "./icons/5.png.webp", // Санитары
       title: "Санитары",
       description: ""
     },
     {
-      image: "/icons/6.png.webp", // Штурмовики
+      image: "./icons/6.png.webp", // Штурмовики
       title: "Штурмовики",
       description: ""
     },
     {
-      image: "/icons/7.png.webp", // Операторы БПЛА
+      image: "./icons/7.png.webp", // Операторы БПЛА
       title: "Операторы БПЛА",
       description: ""
     },
     {
-      image: "/icons/8.png.webp", // Артиллеристы
+      image: "./icons/8.png.webp", // Артиллеристы
       title: "Артиллеристы",
       description: ""
     },
     {
-      image: "/icons/9.png.webp", // Танкисты
+      image: "./icons/9.png.webp", // Танкисты
       title: "Танкисты",
       description: ""
     },
     {
-      image: "/icons/10.png.webp", // Водители
+      image: "./icons/10.png.webp", // Водители
       title: "Водители",
       description: "категории В, С"
     },

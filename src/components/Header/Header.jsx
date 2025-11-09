@@ -201,7 +201,7 @@ const Header = () => {
         {/* Обернули логотип в Link для перехода на главную */}
         <LogoLink to="/" onClick={() => setIsMenuOpen(false)}>
           <LogoImage 
-            src="/photo.png"
+            src="./photo.png"
             alt="123 омсбр бригада Самарканда"
             onError={(e) => {
               e.target.style.display = 'none';
