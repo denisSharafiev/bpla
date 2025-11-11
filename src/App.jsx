@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ИСПОЛЬЗУЕМ HashRouter!
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ИСПОЛЬЗУЕМ HashRouter!
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './theme/globalStyles';
 import { theme } from './theme/theme';
@@ -19,7 +19,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Router> {/* HashRouter без basename */}
+      <Router> 
         <SEO />
         
         <Routes>
