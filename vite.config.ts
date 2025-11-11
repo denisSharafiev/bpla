@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react({
     include: ['**/*.jsx', '**/*.js'], // ОБЯЗАТЕЛЬНО добавить .js
   })],
-  base: '/',
+  base: '/bpla',
   build: {
     outDir: 'dist',
     sourcemap: false,
