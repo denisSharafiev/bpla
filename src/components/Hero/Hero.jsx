@@ -8,6 +8,18 @@ const HeroSection = styled.section`
   overflow: hidden;
   height: 100vh; /* Полная высота экрана */
   margin-top: 0; /* Убираем отступ сверху */
+
+  /* Уменьшаем высоту на мобильных устройствах */
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    height: 70vh; /* Или 80vh в зависимости от нужного размера */
+    min-height: 500px; /* Минимальная высота для очень маленьких экранов */
+  }
+
+  /* Для очень маленьких экранов */
+  @media (max-width: 480px) {
+    height: 60vh;
+    min-height: 400px;
+  }
 `;
 
 const HeroImage = styled.div`
@@ -21,6 +33,17 @@ const HeroImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+
+  /* Оптимизация для мобильных */
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    background-size: cover;
+    background-position: center 30%; /* Можно настроить позиционирование */
+  }
+
+  /* Для очень маленьких экранов */
+  @media (max-width: 480px) {
+    background-position: center 25%;
+  }
 `;
 
 const DarkOverlay = styled.div`
