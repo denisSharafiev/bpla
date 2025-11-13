@@ -10,31 +10,37 @@ const HeroSection = styled.section`
   margin-top: 0; /* Убираем отступ сверху */
 `;
 
-const HeroVideo = styled.video`
+const HeroImage = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-image: url(${props => props.imageUrl});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 1;
 `;
 
+const DarkOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Затемнение 50% */
+  z-index: 2;
+`;
+
 const Hero = () => {
-  const videoUrl = "https://dl.dropbox.com/scl/fi/vpwq1himafbdjy0xwuvly/IMG_4728.MP4?rlkey=71r7d6tj5byrujti0szldot1f&st=qbe7cp8h&dl=0";
+  // Путь к изображению в папке проекта
+  const imageUrl = "./images/photo-heroes1.jpg"; // измени путь на актуальный
 
   return (
     <HeroSection>
-      <HeroVideo 
-        autoPlay 
-        muted 
-        loop 
-        playsInline
-        preload="auto"
-      >
-        <source src={videoUrl} type="video/mp4" />
-        Ваш браузер не поддерживает видео.
-      </HeroVideo>
+      <HeroImage imageUrl={imageUrl} />
+      <DarkOverlay/>
     </HeroSection>
   );
 };

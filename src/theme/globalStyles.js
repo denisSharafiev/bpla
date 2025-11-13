@@ -21,19 +21,18 @@ export const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
     background-color: ${props => props.theme.colors.dark[200]};
     color: ${props => props.theme.colors.light[100]};
-    font-family: 'Capture', Arial, sans-serif;
-    line-height: 1.55;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    font-family: ${props => props.theme.typography.fontFamily.primary};
+    line-height: ${props => props.theme.typography.lineHeight.normal};
+    font-weight: ${props => props.theme.typography.fontWeight.normal};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.normal};
   }
 
   body {
-    font-family: 'Capture', Arial, sans-serif;
     line-height: 1.6;
     background: ${props => props.theme.colors.dark[200]};
     color: ${props => props.theme.colors.light[100]};
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    font-weight: ${props => props.theme.typography.fontWeight.normal};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.normal};
   }
 
   html {
@@ -43,34 +42,70 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
-    font-family: 'Capture', Arial, sans-serif;
+    font-family: ${props => props.theme.typography.fontFamily.accent};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.normal};
   }
 
   button {
     border: none;
     outline: none;
     cursor: pointer;
-    font-family: 'Capture', Arial, sans-serif;
-    letter-spacing: 0.5px;
+    font-family: ${props => props.theme.typography.fontFamily.headings};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.wide};
+    text-transform: uppercase;
+    font-weight: ${props => props.theme.typography.fontWeight.bold};
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Capture', Arial, sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    font-family: ${props => props.theme.typography.fontFamily.headings};
+    font-weight: ${props => props.theme.typography.fontWeight.bold};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.wide};
     text-transform: uppercase;
-    line-height: 1.55;
+    line-height: ${props => props.theme.typography.lineHeight.tight};
+  }
+
+  h1 {
+    font-size: ${props => props.theme.typography.fontSize['5xl']};
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  h2 {
+    font-size: ${props => props.theme.typography.fontSize['4xl']};
+  }
+
+  h3 {
+    font-size: ${props => props.theme.typography.fontSize['3xl']};
   }
 
   p, span, div, li {
-    font-family: 'Capture', Arial, sans-serif;
-    letter-spacing: 0.5px;
-    line-height: 1.55;
+    font-family: ${props => props.theme.typography.fontFamily.accent};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.normal};
+    line-height: ${props => props.theme.typography.lineHeight.relaxed};
   }
 
   input, textarea, select {
-    font-family: 'Capture', Arial, sans-serif;
-    letter-spacing: 0.5px;
+    font-family: ${props => props.theme.typography.fontFamily.accent};
+    letter-spacing: ${props => props.theme.typography.letterSpacing.normal};
+  }
+
+  /* Дополнительные классы для стилей */
+  .font-metal {
+    font-family: ${props => props.theme.typography.fontFamily.metal};
+  }
+  
+  .font-tech {
+    font-family: ${props => props.theme.typography.fontFamily.tech};
+  }
+  
+  .font-heavy {
+    font-family: ${props => props.theme.typography.fontFamily.headings};
+  }
+
+  .text-gradient {
+    background: linear-gradient(45deg, ${props => props.theme.colors.primary}, ${props => props.theme.colors.secondary});
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .container {

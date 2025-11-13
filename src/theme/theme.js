@@ -33,7 +33,11 @@ export const theme = {
   },
   typography: {
     fontFamily: {
-      primary: "'Capture', Arial, sans-serif",
+      primary: "'Black Ops One', cursive",
+      headings: "'Russo One', sans-serif",
+      accent: "'Orbitron', sans-serif",
+      metal: "'Metal Mania', cursive",
+      tech: "'Audiowide', cursive",
       fallback: "Arial, sans-serif"
     },
     fontSize: {
@@ -51,16 +55,17 @@ export const theme = {
       normal: 400,
       medium: 500,
       bold: 700,
+      black: 900,
     },
     letterSpacing: {
       tight: '-0.5px',
-      normal: '0.5px',
-      wide: '1px',
+      normal: '1px',
+      wide: '2px',
     },
     lineHeight: {
-      tight: 1.25,
-      normal: 1.55,
-      relaxed: 1.75,
+      tight: 1.1,
+      normal: 1.3,
+      relaxed: 1.5,
     }
   }
 };
