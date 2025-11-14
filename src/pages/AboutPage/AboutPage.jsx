@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -10,7 +11,7 @@ const PageContainer = styled.div`
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 `;
 
 const PageTitle = styled.h1`
@@ -28,6 +29,24 @@ const PageTitle = styled.h1`
 const TabsContainer = styled.div`
   width: 100%;
   margin-bottom: 2rem;
+`;
+
+const BackButton = styled.button`
+  background: transparent;
+  color: ${props => props.theme.colors.light[200]};
+  border: 1px solid ${props => props.theme.colors.gray[300]};
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background: ${props => props.theme.colors.gray[100]};
+    color: ${props => props.theme.colors.light[100]};
+  }
 `;
 
 const TabsHeader = styled.div`
@@ -51,7 +70,7 @@ const Tab = styled.button`
   color: ${props => props.active ? props.theme.colors.light[100] : props.theme.colors.light[200]};
   border: none;
   padding: 1.2rem 1.5rem;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -164,6 +183,10 @@ const ListItem = styled.li`
 `;
 
 const AboutPage = () => {
+  const navigate = useNavigate();
+    const handleBackClick = () => {
+    navigate('/');
+  };
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -325,6 +348,9 @@ const AboutPage = () => {
   return (
     <PageContainer>
       <Container>
+        <BackButton onClick={handleBackClick}>
+          ← На главную
+        </BackButton>
         <PageTitle>О бригаде "Самарканда"</PageTitle>
 
         <TabsContainer>

@@ -175,12 +175,10 @@ const Footer = () => {
           <LogoText>123 ОМсБр бригада "Самарканда"</LogoText>
         </LogoContainer>
 
-        <NavLinks>
-          {/* Используем StyledLink для внутренних маршрутов */}
+        {/* <NavLinks>
           <StyledLink to="/about">О бригаде</StyledLink>
-          {/* Оставляем NavLink для якорных ссылок или внешних URL */}
           <NavLink href="#recruitment">Присоединиться к бригаде</NavLink>
-        </NavLinks>
+        </NavLinks> */}
 
         <TelegramButton 
           href="https://t.me/Tiimy_Turner17" 

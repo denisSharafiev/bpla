@@ -7,7 +7,7 @@ import ConditionsSection from '../../components/ConditionsSection/ConditionsSect
 const PageContainer = styled.div`
   min-height: 100vh;
   background: ${props => props.theme.colors.dark[200]};
-  padding-top: 5rem;
+  padding-top: 7rem;
 `;
 
 const Container = styled.div`
